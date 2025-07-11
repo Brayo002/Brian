@@ -144,13 +144,10 @@
             position: relative;
             overflow: hidden;
         }
-
-        .profile-image::before {
-            content: '🖥️';
-            font-size: 5rem;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
+        /* Remove the emoji icon */
+        /* .profile-image::before {
+            content: none;
+        } */
 
         .home-title {
             font-size: 3.5rem;
@@ -444,11 +441,13 @@
             <div class="container">
                 <div class="section-content">
                     <div class="home-content">
-                        <div class="profile-image"></div>
+                        <div class="profile-image">
+                            <img src="photo_6012418048318885134_y.jpg" alt="Brian Kipkirui Cheruiyot" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+                        </div>
                         <h1 class="home-title">Brian Kipkirui Cheruiyot</h1>
                         <p class="tagline">Cybersecurity Professional | Digital Forensics Expert | Ethical Hacker</p>
                         <p style="margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem; color: #555;">
-                            With a Bachelor's degree in Computer Security and Forensics from Meru University of Science and Technology, I specialize in protecting digital assets through ethical hacking, digital forensics, and comprehensive security analysis. My expertise spans across various Linux-based tools and modern cybersecurity techniques, validated by certifications in Digital Forensics Essentials and Ethical Hacking and Penetration Testing.
+                            With a Bachelor's degree in Computer Security and Forensics from Meru University of Science and Technology, I specialize in protecting digital assets through ethical hackin[...]
                         </p>
                         <a href="#contact" class="cta-button">Get In Touch</a>
                     </div>
@@ -530,7 +529,7 @@
                                 <p>Comprehensive certification in ethical hacking methodologies</p>
                             </div>
                             <div style="margin-top: 1rem;">
-                                <p><strong>Key Soft Skills:</strong> High interpersonal skills, excellent communication, teamwork, leadership ability, time management, self-motivated, fast learner, hardworking</p>
+                                <p><strong>Key Soft Skills:</strong> High interpersonal skills, excellent communication, teamwork, leadership ability, time management, self-motivated, fast learner, ha[...]
                             </div>
                         </div>
                     </div>
@@ -547,7 +546,7 @@
                         <div class="project-card">
                             <h3 class="project-title">Login Brute Force Prevention System with Account Lockout</h3>
                             <p><strong>Academic Research Project - 2024</strong></p>
-                            <p>Developed a comprehensive cybersecurity system aimed at safeguarding user accounts from unauthorized access attempts through brute force attacks. The system employs advanced algorithms to detect and thwart malicious login patterns, implementing an intelligent account lockout mechanism after detecting suspicious activities.</p>
+                            <p>Developed a comprehensive cybersecurity system aimed at safeguarding user accounts from unauthorized access attempts through brute force attacks. The system employs adva[...]
                             
                             <div style="background: rgba(46, 125, 50, 0.1); border-radius: 10px; padding: 1.5rem; margin: 1rem 0; border-left: 4px solid #2e7d32;">
                                 <h4 style="color: #2e7d32; margin-bottom: 0.5rem;">Key Features:</h4>
@@ -559,8 +558,7 @@
                                 </ul>
                             </div>
 
-                            <p><strong>Impact:</strong> This project showcases an effective solution to mitigate the risk of unauthorized access and data breaches, addressing the critical need for proactive security measures in today's digital landscape.</p>
-
+                            <p><strong>Impact:</strong> This project showcases an effective solution to mitigate the risk of unauthorized access and data breaches, addressing the critical need for pro[...]
                             <div class="project-tech">
                                 <span class="tech-tag">Authentication Systems</span>
                                 <span class="tech-tag">Database Security</span>

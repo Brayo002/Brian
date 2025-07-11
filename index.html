@@ -1,15 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Kipkirui Cheruiyot - Cybersecurity Professional</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -17,49 +13,40 @@
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             overflow-x: hidden;
         }
-
         .container {
             width: 100%;
             max-width: 100%;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        #contact .container {
-            max-width: 1200px;
-        }
-
+        #contact .container { max-width: 1200px; }
         header {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255,255,255,0.98);
             backdrop-filter: blur(15px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-bottom: 1px solid rgba(46,125,50,0.1);
         }
-
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: #2e7d32;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2.5rem;
         }
-
         .nav-links a {
             text-decoration: none;
             color: #2e7d32;
@@ -67,31 +54,17 @@
             transition: all 0.3s ease;
             position: relative;
         }
-
-        .nav-links a:hover {
-            color: #1976d2;
-            transform: translateY(-2px);
-        }
-
+        .nav-links a:hover { color: #1976d2; transform: translateY(-2px);}
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -5px; left: 0;
+            width: 0; height: 2px;
             background: linear-gradient(90deg, #1976d2, #2e7d32);
             transition: width 0.3s ease;
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        main {
-            margin-top: 80px;
-        }
-
+        .nav-links a:hover::after { width: 100%; }
+        main { margin-top: 80px; }
         .section {
             padding: 4rem 0;
             min-height: 100vh;
@@ -99,67 +72,44 @@
             align-items: center;
             position: relative;
         }
-
         .section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(30, 60, 114, 0.1), rgba(46, 125, 50, 0.1));
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(45deg,rgba(30,60,114,0.1),rgba(46,125,50,0.1));
             z-index: -1;
         }
-
         .section-content {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(15px);
             border-radius: 25px;
             padding: 3rem;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             width: 100%;
             max-width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255,255,255,0.3);
+            animation: fadeInUp 0.8s ease-out;
         }
-
-        #contact .section-content {
-            max-width: 1200px;
-        }
-
-        .home-content {
-            text-align: center;
-        }
-
+        #contact .section-content { max-width: 1200px; }
+        .home-content { text-align: center; }
         .profile-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
+            width: 220px; height: 220px; border-radius: 50%;
             background: linear-gradient(135deg, #2e7d32, #1976d2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 2rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            border: 5px solid rgba(255, 255, 255, 0.5);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border: 5px solid rgba(255,255,255,0.5);
+            position: relative; overflow: hidden;
         }
-        
         .home-title {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #2e7d32;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 3.5rem; margin-bottom: 1rem;
+            color: #2e7d32; text-shadow: 0 2px 10px rgba(0,0,0,0.1);
             font-weight: 700;
         }
-
         .tagline {
-            font-size: 1.4rem;
-            color: #1976d2;
-            margin-bottom: 2rem;
-            font-weight: 500;
+            font-size: 1.4rem; color: #1976d2;
+            margin-bottom: 2rem; font-weight: 500;
         }
-
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #2e7d32, #1976d2);
@@ -170,73 +120,46 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
+            box-shadow: 0 8px 25px rgba(46,125,50,0.3);
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(46, 125, 50, 0.4);
+            box-shadow: 0 15px 35px rgba(46,125,50,0.4);
             background: linear-gradient(135deg, #388e3c, #1e88e5);
         }
-
         .resume-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .resume-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.1);
             border-radius: 20px;
             padding: 2.5rem;
-            border: 1px solid rgba(46, 125, 50, 0.2);
+            border: 1px solid rgba(46,125,50,0.2);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .resume-card::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            position: absolute; top: 0; left: 0; right: 0;
             height: 4px;
             background: linear-gradient(90deg, #2e7d32, #1976d2);
         }
-
         .resume-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
-
-        .resume-card h3 {
-            color: #2e7d32;
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .education-item, .experience-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(46, 125, 50, 0.2);
-        }
-
-        .education-item h4, .experience-item h4 {
-            color: #1976d2;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
+        .resume-card h3 { color: #2e7d32; margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 600; }
+        .education-item, .experience-item { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(46,125,50,0.2);}
+        .education-item h4, .experience-item h4 { color: #1976d2; margin-bottom: 0.5rem; font-weight: 600;}
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
-
         .skill-tag {
             background: linear-gradient(135deg, #2e7d32, #1976d2);
             color: white;
@@ -246,152 +169,92 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+            box-shadow: 0 4px 15px rgba(46,125,50,0.2);
         }
-
         .skill-tag:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+            box-shadow: 0 8px 20px rgba(46,125,50,0.3);
         }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .project-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.1);
             border-radius: 20px;
             padding: 2.5rem;
-            border: 1px solid rgba(46, 125, 50, 0.2);
+            border: 1px solid rgba(46,125,50,0.2);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .project-card::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            position: absolute; top: 0; left: 0; right: 0;
             height: 4px;
             background: linear-gradient(90deg, #1976d2, #2e7d32);
         }
-
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-
-        .project-title {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
+        .project-title { color: #2e7d32; margin-bottom: 1rem; font-size: 1.3rem; font-weight: 600;}
         .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;
         }
-
         .tech-tag {
-            background: rgba(46, 125, 50, 0.2);
+            background: rgba(46,125,50,0.2);
             color: #2e7d32;
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
-            border: 1px solid rgba(46, 125, 50, 0.3);
+            border: 1px solid rgba(46,125,50,0.3);
         }
-
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .contact-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.1);
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
-            border: 1px solid rgba(46, 125, 50, 0.2);
+            border: 1px solid rgba(46,125,50,0.2);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .contact-card::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            position: absolute; top: 0; left: 0; right: 0;
             height: 4px;
             background: linear-gradient(90deg, #2e7d32, #1976d2);
         }
-
         .contact-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card h3 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .contact-card p {
-            color: #1976d2;
-            font-weight: 500;
-        }
-
+        .contact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .contact-card h3 { color: #2e7d32; margin-bottom: 1rem; font-weight: 600;}
+        .contact-card p { color: #1976d2; font-weight: 500;}
         .section-title {
             font-size: 2.8rem;
             text-align: center;
             margin-bottom: 2rem;
             color: #2e7d32;
             font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .mobile-nav {
-            display: none;
-        }
-
+        .mobile-nav { display: none; }
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
         }
-
-        .section-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
+            .nav-links { display: none; }
             .mobile-nav {
                 display: block;
                 background: none;
@@ -400,19 +263,9 @@
                 color: #2e7d32;
                 cursor: pointer;
             }
-
-            .home-title {
-                font-size: 2.5rem;
-            }
-
-            .section-content {
-                padding: 2rem;
-            }
-
-            .resume-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            .home-title { font-size: 2.5rem; }
+            .section-content { padding: 2rem; }
+            .resume-grid, .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -424,12 +277,12 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#challenges">Challenges</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="mobile-nav" onclick="toggleMobileNav()">☰</button>
         </nav>
     </header>
-
     <main>
         <section id="home" class="section">
             <div class="container">
@@ -441,7 +294,7 @@
                         <h1 class="home-title">Brian Kipkirui Cheruiyot</h1>
                         <p class="tagline">Cybersecurity Professional | Digital Forensics Expert | Ethical Hacker</p>
                         <p style="margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem; color: #555;">
-                            With a Bachelor's degree in Computer Security and Forensics from Meru University of Science and Technology, I specialize in protecting digital assets through ethical hacking, digital forensics, and advanced security measures. My expertise includes penetration testing, cryptography, web security, and network defense.
+                            With a Bachelor's degree in Computer Security and Forensics from Meru University of Science and Technology, I specialize in protecting digital assets through ethical hacking, digital forensics, and proactive security assessments. My passion lies in identifying vulnerabilities, safeguarding information, and promoting robust cybersecurity best practices.
                         </p>
                         <a href="#contact" class="cta-button">Get In Touch</a>
                     </div>
@@ -472,7 +325,6 @@
                                 <p>2007 - 2015 | Grade: 349 marks</p>
                             </div>
                         </div>
-
                         <div class="resume-card">
                             <h3>Experience</h3>
                             <div class="experience-item">
@@ -496,7 +348,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="resume-card">
                             <h3>Technical Skills</h3>
                             <div class="skills-grid">
@@ -510,7 +361,6 @@
                                 <div class="skill-tag">Network Security</div>
                             </div>
                         </div>
-
                         <div class="resume-card">
                             <h3>Soft Skills & Certifications</h3>
                             <div class="education-item">
@@ -538,9 +388,10 @@
                         <div class="project-card">
                             <h3 class="project-title">Login Brute Force Prevention System with Account Lockout</h3>
                             <p><strong>Academic Research Project - 2024</strong></p>
-                            <p>Developed a comprehensive cybersecurity system aimed at safeguarding user accounts from unauthorized access attempts through brute force attacks. The system employs account lockout mechanisms, real-time monitoring, and proactive notifications to enhance user account security.</p>
-                            
-                            <div style="background: rgba(46, 125, 50, 0.1); border-radius: 10px; padding: 1.5rem; margin: 1rem 0; border-left: 4px solid #2e7d32;">
+                            <p>
+                                Developed a comprehensive cybersecurity system aimed at safeguarding user accounts from unauthorized access attempts through brute force attacks. The system employs account lockout mechanisms to limit repeated failed login attempts, enhancing the overall security posture of authentication systems.
+                            </p>
+                            <div style="background: rgba(46,125,50,0.1); border-radius: 10px; padding: 1.5rem; margin: 1rem 0; border-left: 4px solid #2e7d32;">
                                 <h4 style="color: #2e7d32; margin-bottom: 0.5rem;">Key Features:</h4>
                                 <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
                                     <li>Real-time detection of repeated failed login attempts</li>
@@ -549,8 +400,9 @@
                                     <li>User-friendly interface with security notifications</li>
                                 </ul>
                             </div>
-
-                            <p><strong>Impact:</strong> This project showcases an effective solution to mitigate the risk of unauthorized access and data breaches, addressing the critical need for secure authentication in modern systems.</p>
+                            <p>
+                                <strong>Impact:</strong> This project showcases an effective solution to mitigate the risk of unauthorized access and data breaches, addressing the critical need for secure user authentication in modern applications.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Authentication Systems</span>
                                 <span class="tech-tag">Database Security</span>
@@ -562,6 +414,42 @@
                 </div>
             </div>
         </section>
+
+        <!-- Challenges Section Start -->
+        <section id="challenges" class="section">
+            <div class="container">
+                <div class="section-content">
+                    <h2 class="section-title">Lab Challenges</h2>
+                    <div style="margin-top: 1.5rem;">
+                        <h3>Overly Aggressive Lockout Policies</h3>
+                        <p>
+                            The account lockout mechanism, while effective against brute force attacks, risks inconveniencing legitimate users. Multiple mistyped credentials could trigger lockouts, leading to frustration and reduced usability.
+                        </p>
+                        <h3>Denial of Service (DoS) Risks</h3>
+                        <p>
+                            Attackers could exploit the lockout feature by intentionally triggering lockouts on multiple accounts, causing a denial-of-service situation that disrupts legitimate user access.
+                        </p>
+                        <h3>False Positives</h3>
+                        <p>
+                            Legitimate users who forget their passwords or mistype credentials may inadvertently trigger lockouts, resulting in access issues and negative user experiences.
+                        </p>
+                        <h3>Scalability Issues</h3>
+                        <p>
+                            The system’s performance under high-traffic conditions or large user bases was not fully tested, raising concerns about its ability to handle increased login attempts without delays or crashes.
+                        </p>
+                        <h3>User Notification Delays</h3>
+                        <p>
+                            The notification mechanism for informing users about account lockouts or recovery procedures occasionally experienced delays, potentially leaving users confused or unable to regain access promptly.
+                        </p>
+                        <h3>Complexity in Configuration</h3>
+                        <p>
+                            Allowing administrators to configure login attempt thresholds proved challenging, as overly complex settings could lead to misconfigurations that either weaken security or overly restrict access.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Challenges Section End -->
 
         <section id="contact" class="section">
             <div class="container">
@@ -593,7 +481,6 @@
             </div>
         </section>
     </main>
-
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -611,7 +498,6 @@
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section');
             const navLinks = document.querySelectorAll('.nav-links a');
-            
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -620,7 +506,6 @@
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').substring(1) === current) {
@@ -637,7 +522,6 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const sections = document.querySelectorAll('.section');
-            
             sections.forEach(section => {
                 const speed = scrolled * 0.1;
                 section.style.transform = `translateY(${speed}px)`;
@@ -648,7 +532,6 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -657,7 +540,6 @@
                 }
             });
         }, observerOptions);
-
         document.querySelectorAll('.resume-card, .project-card, .contact-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
